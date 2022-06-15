@@ -2,7 +2,7 @@
 {
     version: 2, // file format version
     // globally unique id for package
-    canonicalName: "com.yaskawa.yii.demoextension",
+    canonicalName: "com.yaskawa.yeu.demoextension",
     vendor: "Yaskawa",
     vendorIcon: "images/Yaskawa-Y-logo.png", // company logo
     packageVersion: { v: "2.1.0" },
@@ -30,8 +30,8 @@
     components: [
         {
             version: 2,
-            // globally unique id for extension - must match Java Extension() constructor
-            canonicalName: "com.yaskawa.yii.demoextension.ext",
+            // globally unique id for extension - must match C# Extension() constructor
+            canonicalName: "com.yaskawa.yeu.demoextension.ext",
             type: "extension",
             // componentVersion: - omit to inherit package version
             description: "Demonstration Extension",
@@ -48,17 +48,17 @@
                 iconName: "images/d-icon-256.png", // extension icon
                 //requiredPlatform: "armhf:linux",
                 requiredPlatform: "any",
-                requiredRuntime: "openjdk11",
+                requiredRuntime: "netcore22",
                 requireNetworking: true,
                 keepFilesOnUpdate: true,
                 extFolder: '.',
-                executableFile: "DemoExtension.jar",
+                executableFile: "/dotnet/dotnet DemoExtension22.dll",
                 configuration: {}
             }
         },
         {
             version: 2,
-            canonicalName: "com.yaskawa.yii.demoextension.job",
+            canonicalName: "com.yaskawa.yeu.demoextension.job",
             type: "jobs",
             modifiesController: true,
             skipWithoutController: true,
